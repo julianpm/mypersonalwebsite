@@ -29,8 +29,27 @@
 				
 
 				<div class="divider"></div>
+				
 
-			
+				
+				
+					
+			<?php elseif (get_row_layout() == 'flex_content_portfolio'): ?>
+		
+				<section class="portfolio">
+
+					<div class="portfolioLabel">
+						<h3><?php the_sub_field('flex_content_portfolio_title'); ?></h3>
+					</div> <!-- END OF PORTFOLIOLABEL -->
+
+
+				</section> <!-- END OF PORTFOLIO -->
+
+
+
+				<div class="divider"></div>
+
+				
 
 			<?php elseif (get_row_layout() == 'flex_content_about'): ?>
 				
@@ -72,8 +91,8 @@
 
 				<section class="contact">
 					
-					<div class="label">
-						<?php the_sub_field('flex_content_contact_label') ?>
+					<div class="contactLabel">
+						<h3><?php the_sub_field('flex_content_contact_label') ?></h3>
 					</div> <!-- END OF LABEL -->					
 
 				</section> <!-- END OF CONTACT -->

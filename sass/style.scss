@@ -20,8 +20,14 @@ $mainGrey:#4a4a4a;
 $bgGrey:#e6e6e6;
 @mixin headerFont($sizeValue){
 	font-size: $sizeValue;
-	color: #4a4a4a;
+	color: $mainGrey;
 	font-family:'Muli',sans-serif;
+	font-weight:300;
+}
+@mixin contentFont($sizeValue){
+	font-size:$sizeValue;
+	color:$mainGrey;
+	font-family:'Poppins',sans-serif;
 	font-weight:300;
 }
 /*
@@ -101,7 +107,6 @@ body {
 }
 
 .nameAndTitle{
-	border:2px solid green;
 	flex-direction:column;
 	width:65%;
 	justify-content:center;
@@ -120,7 +125,6 @@ body {
 .vertDiv{
 	align-items:center;
 	width: 1%;
-	border:2px solid cyan;
 }
 
 .vertDivider{
@@ -130,14 +134,12 @@ body {
 }
 
 .theHeader{
-	border:2px solid purple;
 	width: 34%;
 	align-items:center;
 	justify-content:center;
 }
 
 .mainMenu{
-	border:2px solid blue;
 	flex-direction:column;
 	height:48%;
 	align-items:center;
@@ -173,12 +175,26 @@ body {
 
 
 
+// Portfolio
+
+.portfolio{
+	max-width: 1000px;
+	margin:0 auto;
+	border:2px solid maroon;
+	h3{
+		@include headerFont(30px);
+	}
+}
+
+
+
+
+
 
 
 // ABOUT
 
 .about{
-	border:3px solid red;
 	max-width: 1000px;
 	justify-content:space-between;
 	margin: 0 auto;
@@ -189,7 +205,6 @@ body {
 
 .bio{
 	width:65%;
-	border:2px solid blue;
 	h3, p{
 		margin-bottom:4%;
 	}
@@ -203,7 +218,6 @@ body {
 }
 
 .bullet{
-	border:4px solid green;
 	width: 100%;
 	text-align:center;
 	margin:2% 0;
@@ -211,7 +225,6 @@ body {
 }
 
 .quote{
-	border:2px solid purple;
 	margin:0 auto;
 	text-align:center;
 	p{
@@ -229,11 +242,44 @@ body {
 
 // CONTACT
 
-.contact{
+.contactLabel{
 	border:2px solid turquoise;
 	max-width: 1000px;
 	margin:0 auto;
+	h3{
+	@include headerFont(30px);
+	}
 }
+
+
+
+
+
+
+
+
+// FOOTER
+
+.mainFooter{
+	border:2px solid $mainGrey;
+	background: rgba($bgGrey, 0.4);
+	margin:0 auto;
+	text-align:center;
+	p{
+		padding:1%;
+		@include contentFont(16px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
