@@ -1,10 +1,13 @@
-/*
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
-* Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+/*!
+Theme Name: Julian Meanchoff
+Theme URI: http://julianmeanchoff.com
+Author: Julian Meanchoff
+Author URI: http://julianmeanchoff.com
+Description: Custom WordPress theme designed & developed by Julian Meanchoff for Julian Meanchoff.
+Version: 1.0
+License: The MIT License (MIT)
+License URI: http://opensource.org/licenses/MIT
+Text Domain: julian-meanchoff
 */
 
 @import 'normalize';
@@ -13,14 +16,33 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+$mainGrey:#4a4a4a;
+$bgGrey:#e6e6e6;
+@mixin headerFont($sizeValue){
+	font-size: $sizeValue;
+	color: #4a4a4a;
+	font-family:'Muli',sans-serif;
+	font-weight:300;
+}
 /*
 ====================================
 Default Styling
 ====================================
 */
 
+.flex{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li{
+	padding:0;
+	margin:0;
+}
+
 img {
 	max-width: 100%;
+	height:auto;
 }
 
 body {
@@ -30,7 +52,14 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	border:1px solid orange;
 }
+
+// .innerWrapper{
+// 	max-width: 1050px;
+// 	border:2px solid black;
+// 	margin:0 auto;
+// }
 
 .content {
 	float: left;
@@ -40,6 +69,170 @@ body {
 
 .full {
 	width: 100%;
+}
+
+.current_page_item{
+	list-style:none;
+}
+
+.divider{
+	max-width: 50%;
+	margin:4% auto;
+	border-top:1px solid $mainGrey;
+}
+
+
+
+
+
+
+
+
+
+
+// MAIN
+
+.mainPage{
+	border:2px solid $mainGrey;
+	height:89.5vh;
+	margin:3% 0;
+	background: rgba($bgGrey, 0.4);
+	justify-content:space-around;
+}
+
+.nameAndTitle{
+	border:2px solid green;
+	flex-direction:column;
+	width:65%;
+	justify-content:center;
+	padding-left:10%;
+	letter-spacing:5px;
+	line-height:80px;
+	color:$mainGrey;
+	h1{
+		@include headerFont(64px);
+	}
+	h2{
+		@include headerFont(36px);
+	}
+}
+
+.vertDiv{
+	align-items:center;
+	width: 1%;
+	border:2px solid cyan;
+}
+
+.vertDivider{
+	border-right:1px solid $mainGrey;
+	height:68%;
+	margin: 0 auto;
+}
+
+.theHeader{
+	border:2px solid purple;
+	width: 34%;
+	align-items:center;
+	justify-content:center;
+}
+
+.mainMenu{
+	border:2px solid blue;
+	flex-direction:column;
+	height:48%;
+	align-items:center;
+	justify-content:space-between;
+	li{
+		position:relative;
+	}
+	li:nth-child(2)::before{
+		content:'•';
+		display:block;
+		position:absolute;
+		bottom:72px;
+		left:35px;
+		@include headerFont(20px);
+	}
+	li:nth-child(2)::after{
+		content:'•';
+		display:block;
+		position:absolute;
+		top:72px;
+		left:35px;
+		@include headerFont(20px);
+	}
+	a{
+		color:$mainGrey;
+		@include headerFont(28px);
+	}
+}
+
+
+
+
+
+
+
+
+
+// ABOUT
+
+.about{
+	border:3px solid red;
+	max-width: 1000px;
+	justify-content:space-between;
+	margin: 0 auto;
+	h3{
+		@include headerFont(30px);
+	}
+}
+
+.bio{
+	width:65%;
+	border:2px solid blue;
+	h3, p{
+		margin-bottom:4%;
+	}
+}
+
+.headShot{
+	width: 27%;
+	img{
+		background-size:100%;
+	}
+}
+
+.bullet{
+	border:4px solid green;
+	width: 100%;
+	text-align:center;
+	margin:2% 0;
+	@include headerFont(20px);
+}
+
+.quote{
+	border:2px solid purple;
+	margin:0 auto;
+	text-align:center;
+	p{
+		line-height:30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+// CONTACT
+
+.contact{
+	border:2px solid turquoise;
+	max-width: 1000px;
+	margin:0 auto;
 }
 
 

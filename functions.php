@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'theme_setup' );
 We'll let WordPress add them to our templates automatically instead
 of writing our own script tags in the header and footer. */
 
-function hackeryou_scripts() {
+function julianmeanchoff_scripts() {
 
 	//Don't use WordPress' local copy of jquery, load our own version from a CDN instead
 	wp_deregister_script('jquery');
@@ -72,12 +72,12 @@ function hackeryou_scripts() {
   );
 }
 
-add_action( 'wp_enqueue_scripts', 'hackeryou_scripts' );
+add_action( 'wp_enqueue_scripts', 'julianmeanchoff_scripts' );
 
 
 /* Custom Title Tags */
 
-function hackeryou_wp_title( $title, $sep ) {
+function julianmeanchoff_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -100,60 +100,60 @@ function hackeryou_wp_title( $title, $sep ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'hackeryou_wp_title', 10, 2 );
+add_filter( 'wp_title', 'julianmeanchoff_wp_title', 10, 2 );
 
 /*
   Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function hackeryou_page_menu_args( $args ) {
+function julianmeanchoff_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'julianmeanchoff_page_menu_args' );
 
 
 /*
  * Sets the post excerpt length to 40 characters.
  */
-function hackeryou_excerpt_length( $length ) {
+function julianmeanchoff_excerpt_length( $length ) {
 	return 40;
 }
-add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
+add_filter( 'excerpt_length', 'julianmeanchoff_excerpt_length' );
 
 /*
  * Returns a "Continue Reading" link for excerpts
  */
-function hackeryou_continue_reading_link() {
+function julianmeanchoff_continue_reading_link() {
 	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
 }
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and hackeryou_continue_reading_link().
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and julianmeanchoff_continue_reading_link().
  */
-function hackeryou_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hackeryou_continue_reading_link();
+function julianmeanchoff_auto_excerpt_more( $more ) {
+	return ' &hellip;' . julianmeanchoff_continue_reading_link();
 }
-add_filter( 'excerpt_more', 'hackeryou_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'julianmeanchoff_auto_excerpt_more' );
 
 /**
  * Adds a pretty "Continue Reading" link to custom post excerpts.
  */
-function hackeryou_custom_excerpt_more( $output ) {
+function julianmeanchoff_custom_excerpt_more( $output ) {
 	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= hackeryou_continue_reading_link();
+		$output .= julianmeanchoff_continue_reading_link();
 	}
 	return $output;
 }
-add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
+add_filter( 'get_the_excerpt', 'julianmeanchoff_custom_excerpt_more' );
 
 
 /*
  * Register a single widget area.
  * You can register additional widget areas by using register_sidebar again
- * within hackeryou_widgets_init.
+ * within julianmeanchoff_widgets_init.
  * Display in your template with dynamic_sidebar()
  */
-function hackeryou_widgets_init() {
+function julianmeanchoff_widgets_init() {
 	// Area 1, located at the top of the sidebar.
 	register_sidebar( array(
 		'name' => 'Primary Widget Area',
@@ -167,23 +167,23 @@ function hackeryou_widgets_init() {
 
 }
 
-add_action( 'widgets_init', 'hackeryou_widgets_init' );
+add_action( 'widgets_init', 'julianmeanchoff_widgets_init' );
 
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
  */
-function hackeryou_remove_recent_comments_style() {
+function julianmeanchoff_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 }
-add_action( 'widgets_init', 'hackeryou_remove_recent_comments_style' );
+add_action( 'widgets_init', 'julianmeanchoff_remove_recent_comments_style' );
 
 
-if ( ! function_exists( 'hackeryou_posted_on' ) ) :
+if ( ! function_exists( 'julianmeanchoff_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  */
-function hackeryou_posted_on() {
+function julianmeanchoff_posted_on() {
 	printf('<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s',
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
@@ -200,11 +200,11 @@ function hackeryou_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'hackeryou_posted_in' ) ) :
+if ( ! function_exists( 'julianmeanchoff_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
  */
-function hackeryou_posted_in() {
+function julianmeanchoff_posted_in() {
 	// Retrieves tag list of current post, separated by commas.
 	$tag_list = get_the_tag_list( '', ', ' );
 	if ( $tag_list ) {
@@ -266,3 +266,31 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/**
+*
+* Enqueue Google Fonts
+*
+**/
+
+function julianmeanchoff_google_fonts() {
+    $query_args = array(
+        'family' => 'Muli:400,300',
+        'subset' => 'latin,latin-ext',
+    );
+    wp_register_style( 'julianmeanchoff_google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+   }
+     
+add_action('wp_enqueue_scripts', 'julianmeanchoff_google_fonts');
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,7 +13,7 @@ var gulp   = require('gulp'),
 
 gulp.task('bs', function() {
 	browserSync.init({
-		proxy: 'http://localhost:8888'
+		proxy: 'http://localhost:8888/mypersonalwebsite'
 	});
 });
 
