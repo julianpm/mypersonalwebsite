@@ -30,20 +30,74 @@
 
 				<div class="divider"></div>
 				
+				<div class="portfolioHeader">
+					<h3>Portfolio</h3>
+				</div>
+					<?php
 
-				
-				
-					
-			<?php elseif (get_row_layout() == 'flex_content_portfolio'): ?>
-		
-				<section class="portfolio">
+					$portfolioPieces = new WP_Query(
+						array(
+							'posts_per_page' => -1,
+							'post_type' => 'portfolio',
+							'order' => 'ASC'
+							)
+					); ?>
 
-					<div class="portfolioLabel">
-						<h3><?php the_sub_field('flex_content_portfolio_title'); ?></h3>
-					</div> <!-- END OF PORTFOLIOLABEL -->
+					<?php if ( $portfolioPieces->have_posts() ) : ?>
 
+						<?php while ($portfolioPieces->have_posts()) : $portfolioPieces->the_post(); ?>
 
+				<section class='portfolio flex' id="<?php echo $post->post_name; ?>">
+								
+					<div class="portfolioImages">
+							<div class="image">
+								<?php $image = get_field('portfolio_screenshots'); ?>
+								<img src="<?php echo $image['sizes']['portfolioPic'] ?>">
+							</div>
+					</div> <!-- END OF PORTFOLIOIMAGES -->
+
+					<div class="portfolioInfo">	
+
+						<h5><?php the_title(); ?></h5>
+
+						<div class="portfolioTools">		
+
+							<?php
+
+								// check if the repeater field has rows of data
+								if( have_rows('tools') ):
+
+								 	// loop through the rows of data
+								    while ( have_rows('tools') ) : the_row();
+
+							       // display a sub field value
+							       ?> 
+								        <p><?php  the_sub_field('tool'); ?></p>
+									<?php
+								    endwhile;
+
+								else :
+
+								    // no rows found
+
+								endif;
+
+							?>
+
+						</div> <!-- END OF PORTFOLIOTOOLS -->
+
+					</div> <!-- END OF PORTFOLIOINFO -->
+
+						
 				</section> <!-- END OF PORTFOLIO -->
+
+						<?php endwhile; ?>
+
+						<?php wp_reset_postdata(); ?>
+
+					<?php else:  ?>
+						
+					<?php endif; ?>
 
 
 
@@ -93,7 +147,30 @@
 					
 					<div class="contactLabel">
 						<h3><?php the_sub_field('flex_content_contact_label') ?></h3>
-					</div> <!-- END OF LABEL -->					
+						<p><?php the_sub_field('flex_content_contact_email') ?></p>
+					</div> <!-- END OF LABEL -->
+
+					<div class="socialIcons flex">	
+
+							<?php if ( get_sub_field('flex_content_contact_twitter') ) : ?>
+								<a href="<?php the_sub_field('flex_content_contact_twitter'); ?>">
+									<i class="fa fa-twitter"></i>
+								</a>
+							<?php endif; ?>
+
+							<?php if ( get_sub_field('flex_content_contact_linkedin') ) : ?>
+								<a href="<?php the_sub_field('flex_content_contact_linkedin'); ?>">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							<?php endif; ?>
+
+							<?php if ( get_sub_field('flex_content_contact_github') ) : ?>
+								<a href="<?php the_sub_field('flex_content_contact_github'); ?>">
+									<i class="fa fa-github"></i>
+								</a>
+							<?php endif; ?>
+
+					</div> <!-- END OF SOCIALICONS -->
 
 				</section> <!-- END OF CONTACT -->
 

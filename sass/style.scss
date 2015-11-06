@@ -18,6 +18,7 @@ Text Domain: julian-meanchoff
 @import 'footer';
 $mainGrey:#4a4a4a;
 $bgGrey:#e6e6e6;
+$hoverBlack:#161616;
 @mixin headerFont($sizeValue){
 	font-size: $sizeValue;
 	color: $mainGrey;
@@ -177,14 +178,46 @@ body {
 
 // Portfolio
 
+.portfolioHeader{
+	max-width: 1000px;
+	margin:0 auto;
+	border:2px solid turquoise;
+	h3{
+		@include headerFont(24px);
+	}
+}
+
 .portfolio{
 	max-width: 1000px;
 	margin:0 auto;
 	border:2px solid maroon;
-	h3{
-		@include headerFont(30px);
+	justify-content:space-between;
+	h5{
+		@include headerFont(20px);
+		border:2px solid purple;
 	}
 }
+
+.portfolioImages{
+	width: 45%;
+	border:2px solid green;
+	margin-top:4%;
+}
+
+.portfolioInfo{
+	border:2px solid blue;
+	width: 50%;
+	margin-top:4%;
+}
+
+.portfolioTools{
+	border:2px solid pink;
+	padding-top:2%;
+	@include contentFont(16px);
+}
+
+
+
 
 
 
@@ -199,12 +232,13 @@ body {
 	justify-content:space-between;
 	margin: 0 auto;
 	h3{
-		@include headerFont(30px);
+		@include headerFont(24px);
 	}
 }
 
 .bio{
 	width:65%;
+	@include contentFont(16px);
 	h3, p{
 		margin-bottom:4%;
 	}
@@ -227,6 +261,7 @@ body {
 .quote{
 	margin:0 auto;
 	text-align:center;
+	@include contentFont(16px);
 	p{
 		line-height:30px;
 	}
@@ -240,18 +275,39 @@ body {
 
 
 
+
 // CONTACT
 
-.contactLabel{
-	border:2px solid turquoise;
+.contact{
 	max-width: 1000px;
+	margin: 0 auto 4% auto;
+}
+
+.contactLabel{
 	margin:0 auto;
 	h3{
-	@include headerFont(30px);
+		@include headerFont(24px);
+	}
+	p{
+		@include contentFont(16px);
+		margin:2% 0 2% 0;
 	}
 }
 
-
+.socialIcons{
+	justify-content:space-around;
+	margin: 0 auto;
+	a{
+		text-align:center;
+		width: 8%;
+		@include contentFont(24px);
+		transition: 2s ease;
+		padding:2.5% 0;
+		&:hover{
+			color:$hoverBlack;
+		}
+	}
+}
 
 
 
@@ -261,13 +317,13 @@ body {
 // FOOTER
 
 .mainFooter{
-	border:2px solid $mainGrey;
+	border-top:2px solid $mainGrey;
 	background: rgba($bgGrey, 0.4);
 	margin:0 auto;
 	text-align:center;
 	p{
-		padding:1%;
-		@include contentFont(16px);
+		padding:2%;
+		@include contentFont(12px);
 	}
 }
 
