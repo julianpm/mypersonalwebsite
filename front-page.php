@@ -56,7 +56,7 @@
 							</div>
 					</div> <!-- END OF PORTFOLIOIMAGES -->
 
-					<div class="portfolioInfo">	
+					<div class="portfolioInfo flex">	
 
 						<h5><?php the_title(); ?></h5>
 
@@ -86,8 +86,19 @@
 
 						</div> <!-- END OF PORTFOLIOTOOLS -->
 
-					</div> <!-- END OF PORTFOLIOINFO -->
+						<div class="portfolioDescription">
+							
+							<?php the_field('project_description') ?>
 
+						</div> <!-- END OF PORTFOLIODESCRIPTION -->
+	
+						<button class="visitPage">
+								
+							<?php the_field('button') ?>
+
+						</button> <!-- END OF VISITPAGE -->
+
+					</div> <!-- END OF PORTFOLIOINFO -->
 						
 				</section> <!-- END OF PORTFOLIO -->
 

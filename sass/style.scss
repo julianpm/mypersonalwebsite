@@ -181,7 +181,6 @@ body {
 .portfolioHeader{
 	max-width: 1000px;
 	margin:0 auto;
-	border:2px solid turquoise;
 	h3{
 		@include headerFont(24px);
 	}
@@ -189,33 +188,47 @@ body {
 
 .portfolio{
 	max-width: 1000px;
-	margin:0 auto;
-	border:2px solid maroon;
+	margin:5% auto 0 auto;
 	justify-content:space-between;
+	border:2px solid green;
 	h5{
 		@include headerFont(20px);
-		border:2px solid purple;
+		width: 100%;
 	}
 }
 
 .portfolioImages{
 	width: 45%;
-	border:2px solid green;
-	margin-top:4%;
+	.portfolioImages:nth-child(2){
+		margin-top:7%;
+	}
 }
 
 .portfolioInfo{
-	border:2px solid blue;
-	width: 50%;
-	margin-top:4%;
+	@include contentFont(16px);
+	width: 52%;
 }
 
 .portfolioTools{
-	border:2px solid pink;
-	padding-top:2%;
-	@include contentFont(16px);
+	width: 30%;
+	margin-bottom:3%;
 }
 
+.portfolioDescription{
+	width: 70%;
+	margin-bottom:3%;
+}
+
+.visitPage{
+	@include contentFont(16px);
+	border:2px solid $mainGrey;
+	border-radius:5px;
+	background: $bgGrey;
+	padding:2% 0 2% 0;
+	margin:0 auto;
+	width: 70%;
+
+}
 
 
 
