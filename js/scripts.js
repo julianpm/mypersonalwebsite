@@ -1,5 +1,10 @@
 $(function(){
 
-	console.log("It's working");
 
+});
+
+$( "socialIcons").scroll(function() {
+	$( ".indivIcon" ).slideDown( "slow", function() {
+	// Animation complete.
+	});
 });

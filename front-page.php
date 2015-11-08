@@ -26,9 +26,8 @@
 
 				</section> <!-- END OF MAINPAGE -->
 
-				
 
-				<div class="divider"></div>
+
 				
 				<div class="portfolioHeader">
 					<h3>Portfolio</h3>
@@ -120,6 +119,8 @@
 				
 				<section class="about flex">
 
+					<h3><?php the_sub_field('flex_content_about_about') ?></h3>
+
 					<div class="bio">
 						<?php the_sub_field('flex_content_about_bio'); ?>
 					</div> <!-- END OF BIO -->	
@@ -164,19 +165,19 @@
 					<div class="socialIcons flex">	
 
 							<?php if ( get_sub_field('flex_content_contact_twitter') ) : ?>
-								<a href="<?php the_sub_field('flex_content_contact_twitter'); ?>">
+								<a class="indivIcon" href="<?php the_sub_field('flex_content_contact_twitter'); ?>">
 									<i class="fa fa-twitter"></i>
 								</a>
 							<?php endif; ?>
 
 							<?php if ( get_sub_field('flex_content_contact_linkedin') ) : ?>
-								<a href="<?php the_sub_field('flex_content_contact_linkedin'); ?>">
+								<a class="indivIcon" href="<?php the_sub_field('flex_content_contact_linkedin'); ?>">
 									<i class="fa fa-linkedin"></i>
 								</a>
 							<?php endif; ?>
 
 							<?php if ( get_sub_field('flex_content_contact_github') ) : ?>
-								<a href="<?php the_sub_field('flex_content_contact_github'); ?>">
+								<a class="indivIcon" href="<?php the_sub_field('flex_content_contact_github'); ?>">
 									<i class="fa fa-github"></i>
 								</a>
 							<?php endif; ?>

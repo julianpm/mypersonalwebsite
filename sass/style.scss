@@ -59,14 +59,7 @@ body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
-	border:1px solid orange;
 }
-
-// .innerWrapper{
-// 	max-width: 1050px;
-// 	border:2px solid black;
-// 	margin:0 auto;
-// }
 
 .content {
 	float: left;
@@ -84,7 +77,7 @@ body {
 
 .divider{
 	max-width: 50%;
-	margin:4% auto;
+	margin:7% auto;
 	border-top:1px solid $mainGrey;
 }
 
@@ -102,7 +95,7 @@ body {
 .mainPage{
 	border:2px solid $mainGrey;
 	height:89.5vh;
-	margin:3% 0;
+	margin:3% 0 6% 0;
 	background: rgba($bgGrey, 0.4);
 	justify-content:space-around;
 }
@@ -188,9 +181,9 @@ body {
 
 .portfolio{
 	max-width: 1000px;
-	margin:5% auto 0 auto;
+	margin:0 auto;
+	padding-top:6%;
 	justify-content:space-between;
-	border:2px solid green;
 	h5{
 		@include headerFont(20px);
 		width: 100%;
@@ -199,9 +192,6 @@ body {
 
 .portfolioImages{
 	width: 45%;
-	.portfolioImages:nth-child(2){
-		margin-top:7%;
-	}
 }
 
 .portfolioInfo{
@@ -241,18 +231,22 @@ body {
 // ABOUT
 
 .about{
+	border:2px solid green;
 	max-width: 1000px;
 	justify-content:space-between;
 	margin: 0 auto;
 	h3{
 		@include headerFont(24px);
+		width: 100%;
+		margin-bottom:6%;
 	}
 }
 
 .bio{
 	width:65%;
+	border:2px solid purple;
 	@include contentFont(16px);
-	h3, p{
+	p{
 		margin-bottom:4%;
 	}
 }
@@ -300,24 +294,29 @@ body {
 	margin:0 auto;
 	h3{
 		@include headerFont(24px);
+		margin-bottom:6%;
 	}
 	p{
 		@include contentFont(16px);
-		margin:2% 0 2% 0;
 	}
 }
 
 .socialIcons{
 	justify-content:space-around;
-	margin: 0 auto;
+	margin: 3% auto;
 	a{
 		text-align:center;
 		width: 8%;
 		@include contentFont(24px);
-		transition: 2s ease;
+		transition: 1s ease;
 		padding:2.5% 0;
+		border:2px solid transparent;
+		border-radius:10px;
 		&:hover{
 			color:$hoverBlack;
+			background: $mainGrey;
+			border-radius:10px;
+			border:2px solid $hoverBlack;
 		}
 	}
 }
