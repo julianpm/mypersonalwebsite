@@ -91,11 +91,11 @@
 
 						</div> <!-- END OF PORTFOLIODESCRIPTION -->
 	
-						<button class="visitPage">
+						<div class="visitPage">
 								
-							<?php the_field('button') ?>
+							<a href="#"><?php the_field('project_link') ?></a>
 
-						</button> <!-- END OF VISITPAGE -->
+						</div> <!-- END OF VISITPAGE -->
 
 					</div> <!-- END OF PORTFOLIOINFO -->
 						
@@ -185,12 +185,6 @@
 					</div> <!-- END OF SOCIALICONS -->
 
 				</section> <!-- END OF CONTACT -->
-
-
-
-
-
-
 
 			<?php endif; ?>
 		<?php endwhile; ?>

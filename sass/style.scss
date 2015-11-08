@@ -138,6 +138,7 @@ body {
 	height:48%;
 	align-items:center;
 	justify-content:space-between;
+	list-style:none;
 	li{
 		position:relative;
 	}
@@ -160,6 +161,12 @@ body {
 	a{
 		color:$mainGrey;
 		@include headerFont(28px);
+		border-bottom:2px solid transparent;
+		transition:1s ease;
+		&:hover{
+			color:$hoverBlack;
+			border-bottom:2px solid $hoverBlack;
+		}
 	}
 }
 
@@ -209,16 +216,16 @@ body {
 	margin-bottom:3%;
 }
 
-.visitPage{
-	@include contentFont(16px);
-	border:2px solid $mainGrey;
-	border-radius:5px;
-	background: $bgGrey;
-	padding:2% 0 2% 0;
-	margin:0 auto;
-	width: 70%;
+.visitPage a{
+		color:$mainGrey;
+		border-bottom:2px solid transparent;
+		transition:1s ease;
+		&:hover{
+			color:$hoverBlack;
+			border-bottom:2px solid $hoverBlack;
+		}
+	}
 
-}
 
 
 
@@ -231,7 +238,6 @@ body {
 // ABOUT
 
 .about{
-	border:2px solid green;
 	max-width: 1000px;
 	justify-content:space-between;
 	margin: 0 auto;
@@ -244,7 +250,6 @@ body {
 
 .bio{
 	width:65%;
-	border:2px solid purple;
 	@include contentFont(16px);
 	p{
 		margin-bottom:4%;
@@ -306,17 +311,14 @@ body {
 	margin: 3% auto;
 	a{
 		text-align:center;
-		width: 8%;
+		width: 6%;
 		@include contentFont(24px);
 		transition: 1s ease;
-		padding:2.5% 0;
-		border:2px solid transparent;
-		border-radius:10px;
+		padding:1.5% 1.5% 1% 1.5%;
+		border-bottom:2px solid transparent;
 		&:hover{
 			color:$hoverBlack;
-			background: $mainGrey;
-			border-radius:10px;
-			border:2px solid $hoverBlack;
+			border-bottom:2px solid $hoverBlack;
 		}
 	}
 }
