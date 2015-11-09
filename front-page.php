@@ -29,7 +29,7 @@
 
 
 				
-				<div class="portfolioHeader">
+				<div class="portfolioHeader" id="portfolio">
 					<h3>Portfolio</h3>
 				</div>
 					<?php
@@ -117,7 +117,7 @@
 
 			<?php elseif (get_row_layout() == 'flex_content_about'): ?>
 				
-				<section class="about flex">
+				<section class="about flex" id="about">
 
 					<h3><?php the_sub_field('flex_content_about_about') ?></h3>
 
@@ -155,7 +155,7 @@
 
 			<?php elseif (get_row_layout() == 'flex_content_contact'): ?>	
 
-				<section class="contact">
+				<section class="contact" id="contact">
 					
 					<div class="contactLabel">
 						<h3><?php the_sub_field('flex_content_contact_label') ?></h3>
