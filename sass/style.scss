@@ -194,6 +194,7 @@ body {
 	h5{
 		@include headerFont(20px);
 		width: 100%;
+		padding-bottom:2%;
 	}
 }
 
@@ -204,29 +205,45 @@ body {
 .portfolioInfo{
 	@include contentFont(16px);
 	width: 52%;
+	border:2px solid black;
 }
 
 .portfolioTools{
-	width: 30%;
+	border:2px solid red;
+	width: 25%;
 	margin-bottom:3%;
+	p{
+		line-height:25px;
+		@include contentFont(12px);
+		background: $bgGrey;
+		margin-bottom:5%;
+	}
 }
 
 .portfolioDescription{
-	width: 70%;
-	margin-bottom:3%;
+	width: 65%;
+	margin:0 0 4% 8%;
+	border:2px solid blue;
+}
+
+.visitPage{
+	border:2px solid transparent;
+	border-radius:5px;
+	transition:ease 1s;
+	background: $bgGrey;
+	padding:2%;
+	&:hover{
+		border:2px solid $hoverBlack;
+	}
 }
 
 .visitPage a{
-		color:$mainGrey;
-		border-bottom:2px solid transparent;
-		transition:1s ease;
-		&:hover{
-			color:$hoverBlack;
-			border-bottom:2px solid $hoverBlack;
-		}
+	@include contentFont(16px);
+	transition:ease 1s;
+	&:hover{
+		color:$hoverBlack;
 	}
-
-
+}
 
 
 
@@ -271,7 +288,7 @@ body {
 }
 
 .quote{
-	margin:0 auto;
+	margin:0 auto 7% auto;
 	text-align:center;
 	@include contentFont(16px);
 	p{
@@ -288,27 +305,26 @@ body {
 
 
 
-// CONTACT
+// CONTACT/FOOTER
 
 .contact{
-	max-width: 1000px;
-	margin: 0 auto 4% auto;
+	border-top:2px solid $mainGrey;
+	background: rgba($bgGrey, 0.4);
 }
 
 .contactLabel{
 	margin:0 auto;
-	h3{
-		@include headerFont(24px);
-		margin-bottom:6%;
-	}
 	p{
 		@include contentFont(16px);
+		text-align:center;
+		margin-top:2%;
 	}
 }
 
 .socialIcons{
 	justify-content:space-around;
-	margin: 3% auto;
+	margin: 1% auto 0 auto;
+	max-width: 70%;
 	a{
 		text-align:center;
 		width: 6%;
@@ -331,12 +347,12 @@ body {
 // FOOTER
 
 .mainFooter{
-	border-top:2px solid $mainGrey;
-	background: rgba($bgGrey, 0.4);
+	
+	
 	margin:0 auto;
 	text-align:center;
 	p{
-		padding:2%;
+		padding:2% 0 1% 0;
 		@include contentFont(12px);
 	}
 }

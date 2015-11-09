@@ -91,11 +91,11 @@
 
 						</div> <!-- END OF PORTFOLIODESCRIPTION -->
 	
-						<div class="visitPage">
+						<button class="visitPage">
 								
 							<a href="#"><?php the_field('project_link') ?></a>
 
-						</div> <!-- END OF VISITPAGE -->
+						</button> <!-- END OF VISITPAGE -->
 
 					</div> <!-- END OF PORTFOLIOINFO -->
 						
@@ -147,10 +147,8 @@
 
 				</section> <!-- END OF ABOUT -->
 
-				
-
-				<div class="divider"></div>
-
+			</div> <!-- END OF CONTAINER -->
+		</div> <!-- END OF MAIN -->
 
 
 			<?php elseif (get_row_layout() == 'flex_content_contact'): ?>	
@@ -158,7 +156,6 @@
 				<section class="contact" id="contact">
 					
 					<div class="contactLabel">
-						<h3><?php the_sub_field('flex_content_contact_label') ?></h3>
 						<p><?php the_sub_field('flex_content_contact_email') ?></p>
 					</div> <!-- END OF LABEL -->
 
@@ -184,15 +181,10 @@
 
 					</div> <!-- END OF SOCIALICONS -->
 
+					<?php get_footer(); ?>
+
 				</section> <!-- END OF CONTACT -->
 
 			<?php endif; ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
-
-	</div> <!-- END OF CONTAINER -->
-</div> <!-- END OF MAIN -->
-
-
-
-<?php get_footer(); ?>
