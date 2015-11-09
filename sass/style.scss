@@ -28,8 +28,8 @@ $hoverBlack:#161616;
 @mixin contentFont($sizeValue){
 	font-size:$sizeValue;
 	color:$mainGrey;
-	font-family:'Poppins',sans-serif;
-	font-weight:300;
+	font-family:'Puritan',sans-serif;
+	font-weight:400;
 }
 /*
 ====================================
@@ -192,9 +192,9 @@ body {
 	padding-top:6%;
 	justify-content:space-between;
 	h5{
-		@include headerFont(20px);
+		@include headerFont(22px);
 		width: 100%;
-		padding-bottom:2%;
+		padding-bottom:4%;
 	}
 }
 
@@ -205,11 +205,9 @@ body {
 .portfolioInfo{
 	@include contentFont(16px);
 	width: 52%;
-	border:2px solid black;
 }
 
 .portfolioTools{
-	border:2px solid red;
 	width: 25%;
 	margin-bottom:3%;
 	p{
@@ -223,7 +221,6 @@ body {
 .portfolioDescription{
 	width: 65%;
 	margin:0 0 4% 8%;
-	border:2px solid blue;
 }
 
 .visitPage{

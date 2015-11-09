@@ -93,7 +93,7 @@
 	
 						<button class="visitPage">
 								
-							<a href="#"><?php the_field('project_link') ?></a>
+							<?php the_field('project_link') ?>
 
 						</button> <!-- END OF VISITPAGE -->
 
