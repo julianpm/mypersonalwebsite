@@ -277,7 +277,7 @@ function get_post_parent($post) {
 function julianmeanchoff_google_fonts() {
     $query_args = array(
         'family' => 'Muli:400,300',
-        'family' => 'Puritan:400',
+        'family' => 'Hind:400,300',
         'subset' => 'latin,latin-ext',
     );
     wp_register_style( 'julianmeanchoff_google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
