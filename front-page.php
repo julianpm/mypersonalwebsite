@@ -162,7 +162,7 @@
 						<p><?php the_sub_field('flex_content_contact_email') ?></p>
 					</div> <!-- END OF LABEL -->
 
-					<div class="socialIcons flex">	
+					<div class="socialIcons flex wow slideInLeft">	
 
 							<?php if ( get_sub_field('flex_content_contact_twitter') ) : ?>
 								<a class="indivIcon" href="<?php the_sub_field('flex_content_contact_twitter'); ?>">
