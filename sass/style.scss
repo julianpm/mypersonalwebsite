@@ -224,24 +224,17 @@ body {
 }
 
 .visitPage{
+	@include contentFont(16px);
 	border:2px solid transparent;
 	border-radius:5px;
-	transition:ease 1s;
-	background: $bgGrey;
 	padding:2%;
+	background: $bgGrey;
+	transition:1s ease;
 	&:hover{
-		border:2px solid $hoverBlack;
-	}
-}
-
-.visitPage a{
-	@include contentFont(16px);
-	transition:ease 1s;
-	&:hover{
+		border:2px solid $mainGrey;
 		color:$hoverBlack;
 	}
 }
-
 
 
 

@@ -91,11 +91,7 @@
 
 						</div> <!-- END OF PORTFOLIODESCRIPTION -->
 	
-						<button class="visitPage">
-								
-							<?php the_field('project_link') ?>
-
-						</button> <!-- END OF VISITPAGE -->
+						<a class="visitPage" href="<?php the_field('live_link') ?>"><?php the_field('project_link') ?></a>
 
 					</div> <!-- END OF PORTFOLIOINFO -->
 						
