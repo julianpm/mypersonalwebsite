@@ -17,10 +17,6 @@
 						<h2><?php the_sub_field('flex_content_hero_title'); ?></h2>
 					</div> <!-- END OF NAMEANDTITLE -->
 
-					<div class="vertDiv flex">
-						<div class="vertDivider"></div>
-					</div> <!-- END OF VERTDIV -->
-								
 					<div class="theHeader flex">
 						<header>
 						  <div class="container">    

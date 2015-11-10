@@ -116,16 +116,6 @@ body {
 	}
 }
 
-.vertDiv{
-	align-items:center;
-	width: 1%;
-}
-
-.vertDivider{
-	border-right:1px solid $mainGrey;
-	height:68%;
-	margin: 0 auto;
-}
 
 .theHeader{
 	width: 34%;
@@ -406,9 +396,6 @@ body {
 }
 
 @media all and (max-width:450px){
-	.vertDivider{
-		display:none;
-	}
 	.nameAndTitle{
 		width: 100%;
 		h1{
