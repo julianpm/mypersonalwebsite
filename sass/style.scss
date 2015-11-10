@@ -128,17 +128,18 @@ body {
 }
 
 .theHeader{
+	border:2px solid blue;
 	width: 34%;
 	align-items:center;
-	justify-content:center;
+	justify-content:space-around;
 }
 
 .mainMenu{
 	flex-direction:column;
-	height:48%;
 	align-items:center;
 	justify-content:space-between;
 	list-style:none;
+	height:350px;
 	a{
 		color:$mainGrey;
 		@include headerFont(28px);
@@ -429,6 +430,7 @@ body {
 		flex-direction:row;
 		margin-top:0;
 		width: 100%;
+		height:100%;
 		a{
 			font-size:16px;
 		}

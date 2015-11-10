@@ -23,17 +23,13 @@
 								
 					<div class="theHeader flex">
 						<header>
-						  <div class="container">
-
-						    <nav class="mainNav flex">      
+						  <div class="container">    
 						        
 						        <ul class="mainMenu flex">
 						          
 						          <?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
 						        
 						        </ul><!-- .menu -->
-
-						    </nav> <!-- END OF MAINNAV -->
 
 
 						  </div> <!-- /.container -->
