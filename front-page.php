@@ -1,3 +1,4 @@
+<?php get_header() ?>
 
 <div class="main">
 	<div class="container">
@@ -21,7 +22,22 @@
 					</div> <!-- END OF VERTDIV -->
 								
 					<div class="theHeader flex">
-						<?php get_header(); ?>
+						<header>
+						  <div class="container">
+
+						    <nav class="mainNav flex">      
+						        
+						        <ul class="mainMenu flex">
+						          
+						          <?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>
+						        
+						        </ul><!-- .menu -->
+
+						    </nav> <!-- END OF MAINNAV -->
+
+
+						  </div> <!-- /.container -->
+						</header><!--/.header-->
 					</div> <!-- END OF THEHEADER -->
 
 				</section> <!-- END OF MAINPAGE -->
@@ -148,10 +164,6 @@
 
 						<?php endif; ?>
 					</div> <!-- END OF HEADSHOT -->
-
-					<div class="headshotCredit">
-						<?php the_sub_field('flex_content_about_credit') ?>
-					</div> <!-- END OF HEADSHOTCREDIT -->
 
 					<div class="bullet">
 						<?php the_sub_field('flex_content_about_divider') ?>

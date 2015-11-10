@@ -139,25 +139,6 @@ body {
 	align-items:center;
 	justify-content:space-between;
 	list-style:none;
-	li{
-		position:relative;
-	}
-	li:nth-child(2)::before{
-		content:'•';
-		display:block;
-		position:absolute;
-		bottom:72px;
-		left:35px;
-		@include headerFont(20px);
-	}
-	li:nth-child(2)::after{
-		content:'•';
-		display:block;
-		position:absolute;
-		top:72px;
-		left:35px;
-		@include headerFont(20px);
-	}
 	a{
 		color:$mainGrey;
 		@include headerFont(28px);
@@ -255,12 +236,10 @@ body {
 // ABOUT
 
 .about{
-	border:2px solid green;
 	max-width: 1000px;
 	justify-content:space-between;
 	margin: 0 auto;
 	h3{
-		border:2px solid orange;
 		@include headerFont(24px);
 		width: 100%;
 		margin-bottom:6%;
@@ -268,7 +247,6 @@ body {
 }
 
 .bio{
-	border:2px solid red;
 	width:65%;
 	@include contentFont(16px);
 	p{
@@ -277,28 +255,13 @@ body {
 }
 
 .headShot{
-	border:2px solid turquoise;
 	width: 27%;
 	img{
 		background-size:100%;
 	}
 }
 
-.headshotCredit{
-	border:2px solid magenta;
-	@include contentFont(10px);
-	margin-left:73%;
-	a{
-		color:$mainGrey;
-		&:hover{
-			color:$hoverBlack;
-			transition:0.5s;
-		}
-	}
-}
-
 .bullet{
-	border:2px solid purple;
 	width: 100%;
 	text-align:center;
 	margin:2% 0;
@@ -306,7 +269,6 @@ body {
 }
 
 .quote{
-	border:2px solid pink;
 	margin:0 auto 7% auto;
 	text-align:center;
 	@include contentFont(16px);
@@ -391,6 +353,122 @@ body {
 
 
 
+
+
+// MEDIA QUERIES
+
+@media all and (max-width:1000px){
+	.container{
+		max-width: 95%;
+	}
+	.nameAndTitle h1{
+		font-size:40px;
+	}
+	.nameAndTitle h2{
+		font-size:28px;
+	}
+	.mainMenu a{
+		font-size:20px;
+	}
+}
+
+
+@media all and (max-width:700px){
+	.contactLabel p{
+		font-size:14px;
+	}
+	.socialIcons a{
+		width: 8%;
+	}
+}
+
+
+@media all and (max-width: 600px){
+	.portfolio{
+		flex-direction:column;
+	}
+	.portfolioImages{
+		width: 100%;
+	}
+	.portfolioInfo{
+		width: 100%;
+		margin-top:5%;
+	}
+	.about{
+		// flex-direction:column;
+	}
+	.bio{
+		width: 50%;
+	}
+	.headShot{
+		width: 45%;
+	}
+}
+
+@media all and (max-width:450px){
+	.vertDivider{
+		display:none;
+	}
+	.nameAndTitle{
+		width: 100%;
+		h1{
+			font-size:28px;
+		}
+		h2{
+			font-size:16px;
+		}
+	}
+	.theHeader,
+	header{
+		width: 100%;
+	}
+	.mainPage{
+		height:35vh;
+	}
+	.mainMenu{
+		flex-direction:row;
+		margin-top:0;
+		width: 100%;
+		a{
+			font-size:16px;
+		}
+	}
+	.socialIcons a{
+		width: 12%;
+	}
+	.contactLabel p{
+		font-size:12px;
+	}
+	.portfolio h5{
+		font-size:18px;
+	}
+	.portfolioHeader h3{
+		font-size:18px;
+	}
+	.portfolioTools{
+		width: 40%;
+	}
+	.portfolioDescription{
+		width: 45%;
+		font-size:14px;
+	}
+	.about{
+		flex-direction:column;
+		h3{
+			font-size:18px;
+		}
+	}
+	.bio{
+		width: 100%;
+		font-size:14px;
+	}
+	.headShot{
+		width: 50%;
+	}
+	.quote{
+		font-size:14px;
+	}
+}
 
 
 
