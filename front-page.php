@@ -29,6 +29,13 @@
 
 
 				
+				
+
+
+
+
+
+
 				<div class="portfolioHeader" id="portfolio">
 					<h3>Portfolio</h3>
 				</div>
@@ -107,7 +114,16 @@
 
 
 
+				
+
+
+
 				<div class="divider"></div>
+
+
+
+
+
 
 				
 
@@ -133,6 +149,10 @@
 						<?php endif; ?>
 					</div> <!-- END OF HEADSHOT -->
 
+					<div class="headshotCredit">
+						<?php the_sub_field('flex_content_about_credit') ?>
+					</div> <!-- END OF HEADSHOTCREDIT -->
+
 					<div class="bullet">
 						<?php the_sub_field('flex_content_about_divider') ?>
 					</div> <!-- END OF BULLET -->
@@ -145,6 +165,14 @@
 
 			</div> <!-- END OF CONTAINER -->
 		</div> <!-- END OF MAIN -->
+
+
+			
+
+
+
+
+
 
 
 			<?php elseif (get_row_layout() == 'flex_content_contact'): ?>	

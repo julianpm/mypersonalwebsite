@@ -176,6 +176,11 @@ body {
 
 
 
+
+
+
+
+
 // Portfolio
 
 .portfolioHeader{
@@ -242,13 +247,20 @@ body {
 
 
 
+
+
+
+
+
 // ABOUT
 
 .about{
+	border:2px solid green;
 	max-width: 1000px;
 	justify-content:space-between;
 	margin: 0 auto;
 	h3{
+		border:2px solid orange;
 		@include headerFont(24px);
 		width: 100%;
 		margin-bottom:6%;
@@ -256,6 +268,7 @@ body {
 }
 
 .bio{
+	border:2px solid red;
 	width:65%;
 	@include contentFont(16px);
 	p{
@@ -264,13 +277,28 @@ body {
 }
 
 .headShot{
+	border:2px solid turquoise;
 	width: 27%;
 	img{
 		background-size:100%;
 	}
 }
 
+.headshotCredit{
+	border:2px solid magenta;
+	@include contentFont(10px);
+	margin-left:73%;
+	a{
+		color:$mainGrey;
+		&:hover{
+			color:$hoverBlack;
+			transition:0.5s;
+		}
+	}
+}
+
 .bullet{
+	border:2px solid purple;
 	width: 100%;
 	text-align:center;
 	margin:2% 0;
@@ -278,6 +306,7 @@ body {
 }
 
 .quote{
+	border:2px solid pink;
 	margin:0 auto 7% auto;
 	text-align:center;
 	@include contentFont(16px);
@@ -285,6 +314,9 @@ body {
 		line-height:30px;
 	}
 }
+
+
+
 
 
 
@@ -328,6 +360,11 @@ body {
 		}
 	}
 }
+
+
+
+
+
 
 
 
