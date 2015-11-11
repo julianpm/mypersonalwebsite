@@ -98,11 +98,12 @@ body {
 	margin:3% 0 6% 0;
 	background: rgba($bgGrey, 0.4);
 	justify-content:space-around;
+	align-items:center;
 }
 
 .nameAndTitle{
 	flex-direction:column;
-	width:65%;
+	width:60%;
 	justify-content:center;
 	padding-left:10%;
 	letter-spacing:5px;
@@ -116,11 +117,20 @@ body {
 	}
 }
 
+.vertDiv{
+	width: 1%;
+	height:70%;
+}
+
+.verticalDivider{
+	border-right:1px solid $mainGrey;
+}
+
+
 
 .theHeader{
-	width: 34%;
-	align-items:center;
-	justify-content:space-around;
+	width: 20%;
+	justify-content:center;
 }
 
 .mainMenu{
@@ -201,13 +211,13 @@ body {
 
 .visitPage{
 	@include contentFont(16px);
-	border:2px solid transparent;
+	color:white;
 	border-radius:5px;
 	padding:2%;
-	background: $bgGrey;
+	background: $hoverBlack;
 	transition:1s ease;
 	&:hover{
-		border:2px solid $mainGrey;
+		background: $bgGrey;
 		color:$hoverBlack;
 	}
 }
@@ -405,6 +415,20 @@ body {
 			font-size:16px;
 		}
 	}
+
+	.vertDiv{
+		width: 100%;
+		height: 1%;
+	}
+	
+	.verticalDivider{
+		width: 70%;
+		height: 1%;
+		margin:0 auto;
+		border-bottom:1px solid $mainGrey;
+
+	}
+
 	.theHeader,
 	header{
 		width: 100%;
