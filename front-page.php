@@ -71,8 +71,11 @@
 								
 					<div class="portfolioImages">
 							<div class="image">
-								<?php $image = get_field('portfolio_screenshots'); ?>
-								<img src="<?php echo $image['sizes']['portfolioPic'] ?>">
+								<?php $image = get_field('portfolio_screenshots');
+									if( !empty($image) ): ?>
+
+									<img src="<?php echo $image['sizes']['portfolioPic']; ?>" alt="<?php echo $image['alt']; ?>" />
+								<?php endif; ?>
 							</div>
 					</div> <!-- END OF PORTFOLIOIMAGES -->
 
