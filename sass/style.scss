@@ -105,7 +105,7 @@ body {
 	flex-direction:column;
 	width:65%;
 	justify-content:center;
-	padding-left:10%;
+	padding-left:8%;
 	letter-spacing:5px;
 	line-height:80px;
 	color:$mainGrey;
@@ -130,6 +130,7 @@ body {
 
 .theHeader{
 	width: 20%;
+	margin-right:3%;
 	justify-content:center;
 }
 
@@ -213,7 +214,7 @@ body {
 	@include contentFont(16px);
 	color:white;
 	border-radius:5px;
-	padding:2%;
+	padding:2.5% 2% 2% 2%;
 	background: $hoverBlack;
 	transition:1s ease;
 	&:hover{
