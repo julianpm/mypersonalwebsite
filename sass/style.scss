@@ -210,6 +210,13 @@ body {
 	margin:0 0 4% 8%;
 }
 
+.portfolioDescription a{
+	color:$mainGrey;
+	&:hover{
+		color:$hoverBlack;
+	}
+}
+
 .visitPage{
 	@include contentFont(16px);
 	color:white;
@@ -410,12 +417,14 @@ body {
 		font-size:16px;
 		}
 	}
-
 	.vertDiv{
 		width: 100%;
 		height: 1%;
 	}
-	
+	.mainPage{
+		height:40vh;
+		min-height:250px;
+	}
 	.verticalDivider{
 		width: 70%;
 		height: 1%;
@@ -431,6 +440,7 @@ body {
 	.mainMenu{
 		flex-direction:row;
 		margin-top:0;
+		padding:4% 0;
 		width: 100%;
 		height:100%;
 		a{
@@ -480,6 +490,18 @@ body {
 	}
 }
 
+@media all and (max-width: 322px){
+	.nameAndTitle h1{
+		font-size:22px;
+	}
+	.nameAndTitle h2{
+		font-size:12px;
+	}
+	.mainPage{
+		height:45vh;
+		min-height:150px;
+	}
+}
 
 
 
