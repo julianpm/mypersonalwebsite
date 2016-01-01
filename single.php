@@ -9,7 +9,7 @@
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
           <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
+            <?php julianmeanchoff_posted_on(); ?>
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
@@ -21,7 +21,7 @@
           </div><!-- .entry-content -->
 
           <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
+            <?php julianmeanchoff_posted_in(); ?>
             <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
           </div><!-- .entry-utility -->
         </div><!-- #post-## -->
