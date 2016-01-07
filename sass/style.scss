@@ -57,7 +57,7 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1150px;
 	margin: 0 auto;
 }
 
@@ -87,25 +87,20 @@ body {
 
 
 
-
-
-
 // MAIN
 
-.mainPage{
-	border:2px solid $mainGrey;
-	height:89.5vh;
-	margin:3% 0 6% 0;
-	background: rgba($bgGrey, 0.4);
-	justify-content:space-around;
-	align-items:center;
+.hero{
+	// border:2px solid red;
+	justify-content:space-between;
+	// align-items:center;
 }
 
 .nameAndTitle{
+	// border:2px solid green;
 	flex-direction:column;
-	width:65%;
+	width:54%;
 	justify-content:center;
-	padding-left:8%;
+	// padding-left:6%;
 	letter-spacing:5px;
 	line-height:80px;
 	color:$mainGrey;
@@ -117,29 +112,19 @@ body {
 	}
 }
 
-.vertDiv{
-	width: 1%;
-	height:70%;
-}
-
-.verticalDivider{
-	border-right:1px solid $mainGrey;
-}
-
-
-
 .theHeader{
-	width: 20%;
-	margin-right:3%;
+	// border:2px solid magenta;
+	width: 30%;
 	justify-content:center;
 }
 
 .mainMenu{
+	// border:2px solid blue;
+	width: 100%;
 	flex-direction:column;
 	align-items:center;
 	justify-content:space-between;
 	list-style:none;
-	height:350px;
 	a{
 		color:$mainGrey;
 		@include headerFont(28px);
@@ -152,11 +137,33 @@ body {
 	}
 }
 
+.about{
+	// border:1px solid turquoise;
+	justify-content:space-between;
+	margin: 0 auto;
+	h3{
+		// border:1px solid black;
+		@include headerFont(24px);
+		width: 100%;
+		// margin-bottom:6%;
+	}
+}
 
+.bio{
+	// border:1px solid brown;
+	width:65%;
+	@include contentFont(16px);
+	p{
+		margin-bottom:2%;
+	}
+}
 
-
-
-
+.headShot{
+	// border:1px solid lightblue;
+	// img{
+	// 	background-size:contain;
+	// }
+}
 
 
 
@@ -166,7 +173,7 @@ body {
 // Portfolio
 
 .portfolioHeader{
-	max-width: 1000px;
+	// border:1px solid limegreen;
 	margin:0 auto;
 	h3{
 		@include headerFont(24px);
@@ -174,7 +181,7 @@ body {
 }
 
 .portfolio{
-	max-width: 1000px;
+	// border:1px solid blue;
 	margin:0 auto;
 	padding-top:6%;
 	justify-content:space-between;
@@ -186,10 +193,12 @@ body {
 }
 
 .portfolioImages{
+	// border:1px solid black;
 	width: 45%;
 }
 
 .portfolioInfo{
+	// border:1px solid green;
 	@include contentFont(16px);
 	width: 52%;
 }
@@ -235,39 +244,7 @@ body {
 
 
 
-
-
-
-
-
-
 // ABOUT
-
-.about{
-	max-width: 1000px;
-	justify-content:space-between;
-	margin: 0 auto;
-	h3{
-		@include headerFont(24px);
-		width: 100%;
-		margin-bottom:6%;
-	}
-}
-
-.bio{
-	width:65%;
-	@include contentFont(16px);
-	p{
-		margin-bottom:4%;
-	}
-}
-
-.headShot{
-	width: 27%;
-	img{
-		background-size:100%;
-	}
-}
 
 .bullet{
 	width: 100%;
@@ -284,12 +261,6 @@ body {
 		line-height:30px;
 	}
 }
-
-
-
-
-
-
 
 
 
@@ -337,10 +308,6 @@ body {
 
 
 
-
-
-
-
 // FOOTER
 
 .mainFooter{
@@ -353,10 +320,6 @@ body {
 		@include contentFont(12px);
 	}
 }
-
-
-
-
 
 
 
