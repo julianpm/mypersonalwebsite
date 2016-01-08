@@ -7,40 +7,27 @@
 			// Layout Name: Flex Content Hero + About
 			if( get_row_layout() == 'flex_content_hero' ): ?>
 			
-				<section class="hero flex">
+				<nav class="theHeader">          
+					<ul class="mainMenu flex">					          
+						<?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>    
+					</ul><!-- /.mainMenu -->
+				</nav><!-- /.header -->
+
+				<section class="hero flex container">
 					
 					<header class="nameAndTitle flex">
 						<h1><?php the_sub_field('flex_content_hero_name'); ?></h1>
 						<h2><?php the_sub_field('flex_content_hero_title'); ?></h2>
 					</header> <!-- END OF NAMEANDTITLE -->
 
-					<nav class="theHeader flex">          
-						<ul class="mainMenu flex">					          
-							<?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>    
-						</ul><!-- /.mainMenu -->
-					</nav><!-- /.header -->
-
-					<div class="about flex" id="about">
-						<?php if ( get_sub_field('flex_content_about_about') ) : ?>
-							<h3><?php the_sub_field('flex_content_about_about') ?></h3>
-						<?php endif; ?>
-
 					<div class="bio">
-						<?php the_sub_field('flex_content_about_bio'); ?>
+						<?php the_sub_field('flex_content_hero_bio'); ?>
 					</div> <!-- END OF BIO -->	
 
-					<?php $image = get_sub_field('flex_content_about_headshot');
+					<?php $image = get_sub_field('flex_content_hero_headshot');
 						if( !empty($image) ): ?>
-							<img class="headShot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<img class="headShot" src="<?php echo $image['sizes']['headshotPic']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>
-
-					<div class="bullet">
-						<?php the_sub_field('flex_content_about_divider') ?>
-					</div> <!-- END OF BULLET -->
-					
-					<div class="quote">
-						<?php the_sub_field('flex_content_about_quote') ?>
-					</div> <!-- END OF QUOTE -->	
 
 				</section> <!-- END OF HERO -->
 

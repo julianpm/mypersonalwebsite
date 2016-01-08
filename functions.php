@@ -12,7 +12,7 @@ function theme_setup() {
 	*  sizes with add_image_size. */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
-	add_image_size('square', 150, 150, true);
+	add_image_size('headshotPic', 250, 250, true);
 	add_image_size('portfolioPic', 450, 256, true);
 
 
