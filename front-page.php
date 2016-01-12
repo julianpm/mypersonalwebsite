@@ -6,27 +6,18 @@
 
 			// Layout Name: Flex Content Hero + About
 			if( get_row_layout() == 'flex_content_hero' ): ?>
-			
-				<nav class="theHeader">          
-					<ul class="mainMenu flex">					          
-						<?php wp_nav_menu( array( "theme_location" => "primary", "container" => '', 'items_wrap'=> '%3$s' ) ); ?>    
-					</ul><!-- /.mainMenu -->
-				</nav><!-- /.header -->
 
 				<section class="hero flex container">
 					
-					<header class="nameAndTitle flex">
+					<header class="nameAndTitle">
 						<h1><?php the_sub_field('flex_content_hero_name'); ?></h1>
 						<h2><?php the_sub_field('flex_content_hero_title'); ?></h2>
-					</header> <!-- END OF NAMEANDTITLE -->
-
-					<div class="bio">
 						<?php the_sub_field('flex_content_hero_bio'); ?>
-					</div> <!-- END OF BIO -->	
+					</header> <!-- END OF NAMEANDTITLE -->
 
 					<?php $image = get_sub_field('flex_content_hero_headshot');
 						if( !empty($image) ): ?>
-							<img class="headShot" src="<?php echo $image['sizes']['headshotPic']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<img class="headShot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>
 
 				</section> <!-- END OF HERO -->
@@ -39,7 +30,7 @@
 					
 					<p class="contactLabel"><?php the_sub_field('flex_content_contact_email') ?></p>
 					
-					<div class="socialIcons flex wow slideInLeft">	
+					<div class="socialIcons wow zoomIn flex">	
 							<?php if ( get_sub_field('flex_content_contact_twitter') ) : ?>
 								<a class="indivIcon" href="<?php the_sub_field('flex_content_contact_twitter'); ?>">
 									<i class="fa fa-twitter"></i>
@@ -61,12 +52,15 @@
 
 				</section> <!-- END OF CONTACT -->
 
+
+				<div class="border"></div>
+
 			
 			<?php // Layout name: Portfolio
 				elseif (get_row_layout() == 'flex_content_portfolio'): ?>
 
 					<?php if ( get_sub_field('flex_content_portfolio_title') ) : ?>
-						<h3 class="container"><?php the_sub_field ('flex_content_portfolio_title') ; ?></h3>
+						<h3 class="portfolioHeader container"><?php the_sub_field ('flex_content_portfolio_title') ; ?></h3>
 					<?php endif; ?>
 
 			<?php $portfolioPieces = new WP_Query(
@@ -83,46 +77,13 @@
 
 				<section class='portfolio container flex' id="<?php echo $post->post_name; ?>">
 								
-					<div class="portfolioImages">
-						<?php $image = get_field('portfolio_screenshots');
-							if( !empty($image) ): ?>
-								<img src="<?php echo $image['sizes']['portfolioPic']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>
-					</div> <!-- END OF PORTFOLIOIMAGES -->
+					<?php the_post_thumbnail( 'portfolioPic', array('class' => 'portfolioImage')); ?>
 
 					<div class="portfolioInfo flex">
-						<h5><?php the_title(); ?></h5>
+						<h4 class="portfolioTitle"><?php the_title(); ?></h4>
+						<?php the_content(); ?>
+						<a class="visitPage" href="<?php the_field('live_link') ?>"><?php the_field('project_link') ?></a>
 					</div> <!-- END OF PORTFOLIOINFO -->
-					
-					<div class="portfolioTools">		
-						<?php
-
-							// check if the repeater field has rows of data
-							if( have_rows('tools') ):
-
-							 	// loop through the rows of data
-							    while ( have_rows('tools') ) : the_row();
-
-						       // display a sub field value
-						       ?> 
-							        <p><?php  the_sub_field('tool'); ?></p>
-								<?php
-							    endwhile;
-
-							else :
-
-							    // no rows found
-
-							endif;
-
-						?>
-					</div> <!-- END OF PORTFOLIOTOOLS -->
-
-					<div class="portfolioDescription">		
-							<?php the_field('project_description') ?>
-					</div> <!-- END OF PORTFOLIODESCRIPTION -->
-	
-					<a class="visitPage" href="<?php the_field('live_link') ?>"><?php the_field('project_link') ?></a>
 						
 				</section> <!-- END OF PORTFOLIO -->
 
