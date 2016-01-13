@@ -58,7 +58,8 @@ body {
 }
 
 .container {
-	max-width: 90%;
+	max-width: 1100px;
+	width:90%;
 	margin: 0 auto;
 }
 
@@ -83,13 +84,11 @@ body {
 // MAIN
 
 .hero{
-	border:1px solid black;
 	justify-content:space-between;
 	margin-top:4%;
 }
 
 .nameAndTitle{
-	border:1px solid black;
 	width: 72%;
 	flex-direction:column;
 	justify-content:center;
@@ -107,6 +106,13 @@ body {
 	p{
 		@include contentFont(16px);
 		line-height:30px;
+		a{
+			color:$mainGrey;
+			transition:1s;
+			&:hover{
+				color:#056CF2;
+			}
+		}
 	}
 	p:nth-of-type(1){
 		margin-top:1%;
@@ -117,14 +123,12 @@ body {
 }
 
 .headShot{
-	border:1px solid black;
 	align-self:flex-start;
 }
 
 .socialIcons{
-	border:1px solid black;
 	justify-content:space-between;
-	margin-left:18%;
+	margin:3% auto;
 	width: 40%;
 	a{
 		text-align:center;
@@ -155,32 +159,30 @@ body {
 // Portfolio
 
 .portfolioHeader{
-	@include headerFont(28px);
+	@include headerFont(36px);
+	letter-spacing:4px;
+	margin-bottom:3%;
 }
 
 .portfolio{
-	border:1px solid black;
-	margin:3% auto;
+	margin:0 auto 6% auto;
 	justify-content:space-between;
 }
 
 .portfolioImage{
-	border:1px solid black;
 	align-self:flex-start;
-	width: 48%;
-}
-
-.portfolioInfo{
-	border:1px solid black;
-	@include contentFont(16px);
-	width: 48%;
-	flex-direction:column;
-	justify-content:space-around;
+	max-width: 35%;
 }
 
 .portfolioTitle{
-	border:1px solid black;
-	@include headerFont(20px);
+	@include headerFont(24px);
+}
+
+.portfolioInfo{
+	@include contentFont(16px);
+	max-width: 60%;
+	flex-direction:column;
+	justify-content:space-around;
 }
 
 .visitPage{ 
@@ -223,9 +225,6 @@ body {
 	.nameAndTitle{
 		width: 65%;
 	}
-	.socialIcons{
-		margin-left:14%;
-	}
 }
 
 @media all and (max-width: 1125px){
@@ -240,6 +239,12 @@ body {
 			font-size:14px;
 		}
 	}
+	.portfolioHeader{
+		font-size:30px;
+	}
+	.portfolioInfo p, .visitPage{
+		font-size:14px;
+	}
 }
 
 @media all and (max-width:1000px){
@@ -248,20 +253,189 @@ body {
 			font-size:44px;
 		}
 		h2{
-		font-size:24px;
+			font-size:24px;
 		}
+	}
+	.portfolioHeader{
+		font-size:24px;
+	}
+	.portfolioTitle{
+		font-size:20px;
 	}
 }
 
 @media all and (max-width: 950px){
-	.socialIcons{
-		margin-top:1%;
+	.portfolioImage{
+		max-width: 48%;
+	}
+	.portfolioInfo{
+		max-width: 48%;
 	}
 }
 
+@media all and (max-width: 900px){
+	.nameAndTitle{
+		width: 62%;
+		h1{
+			font-size:40px;
+		}
+		h2{
+			font-size:22px;
+		}
+	}
+	.portfolioHeader{
+		font-size:22px;
+	}
+	.portfolioTitle{
+		font-size:18px;
+	}
+}
 
+@media all and (max-width: 850px){
+	.nameAndTitle{
+		width: 100%;
+	}
+	.headShot{
+		margin:5% auto 0 auto;
+	}
+	.portfolio{
+		margin-bottom:10%;
+	}
+	.portfolioHeader{
+		margin:6% auto 3% auto;
+		text-align:center;
+	}
+	.portfolioImage{
+		max-width: 100%;
+		margin:0 auto 5% auto;
+	}
+	.portfolioTitle{
+		margin-bottom:3%;
+	}
+	.portfolioInfo{
+		max-width: 100%;
+		p{
+			margin-bottom:3%;
+		}
+	}
+}
 
+@media all and (max-width: 800px){
+	.socialIcons{
+		width: 65%;
+	}
+	.border{
+		width: 45%;
+		margin:6% auto;
+	}
+	.portfolioHeader{
+		margin-bottom:6%;
+	}
+	.mainFooter p{
+		padding:3% 0;
+	}
+}
 
+@media all and (max-width: 510px){
+	.nameAndTitle{
+		h1{
+			font-size:34px;
+		}
+		h2{
+			font-size:18px;
+		}
+		p{
+			font-size:12px;
+		}
+	}
+	.socialIcons{
+		margin-top:6%;
+	}
+	.border{
+		margin:10% auto;
+	}
+	.portfolio{
+		margin-bottom:15%;
+	}
+	.portfolioHeader{
+		font-size:18px;
+		margin-bottom:10%;
+	}
+	.portfolioImage{
+		margin-bottom:8%;
+	}
+	.portfolioTitle{
+		font-size:14px;
+		margin-bottom:5%;
+	}
+	.portfolioInfo p, .visitPage{
+		font-size:12px;
+	}
+	.portfolioInfo p{
+		margin-bottom:5%;
+	}
+	.mainFooter p{
+		padding:4% 0;
+	}
+}
+
+@media all and (max-width: 460px){
+	.nameAndTitle h1{
+		font-size:30px;
+	}
+}
+
+@media all and (max-width: 420px){
+	.nameAndTitle h1{
+		font-size:26px;
+	}
+	.socialIcons{
+		width: 80%;
+	}
+}
+
+@media all and (max-width: 380px){
+	.nameAndTitle{
+		h1{
+			font-size:22px;
+		}
+		h2{
+			font-size:16px;
+		}
+	}
+	.portfolioHeader{
+		font-size:16px;
+	}
+	.portfolioTitle{
+		margin-bottom:7%;
+	}
+	.portfolioInfo p{
+		margin-bottom:7%;
+	}
+	.mainFooter p{
+		padding:5% 0;
+	}
+}
+
+@media all and (max-width: 350px){
+	.nameAndTitle{
+		h1{
+			font-size:18px;
+		}
+		h2{
+			font-size:14px;
+		}
+	}
+	.socialIcons{
+		margin-top:5%;
+	}
+	.portfolioHeader{
+		font-size:14px;
+	}
+	.mainFooter p{
+		padding:6% 0;
+	}
+}
 
 
 // @media all and (max-width:700px){

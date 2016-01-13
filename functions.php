@@ -13,7 +13,7 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('headshotPic', 250, 250, true);
-	add_image_size('portfolioPic', 550, 313, true);
+	add_image_size('portfolioPic', 550, 450, true);
 
 
 	// Add default posts and comments RSS feed links to head
