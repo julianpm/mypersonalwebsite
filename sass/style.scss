@@ -108,8 +108,6 @@ body {
 		@include contentFont(16px);
 		line-height:30px;
 		a{
-			color:$mainGrey;
-			transition:1s;
 			color:$linkBlue;
 		}
 	}
