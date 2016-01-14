@@ -19,6 +19,7 @@ Text Domain: julian-meanchoff
 $mainGrey:#4a4a4a;
 $bgGrey:#e6e6e6;
 $hoverBlack:#161616;
+$linkBlue:#056CF2;
 @mixin headerFont($sizeValue){
 	font-size: $sizeValue;
 	color: $mainGrey;
@@ -109,9 +110,7 @@ body {
 		a{
 			color:$mainGrey;
 			transition:1s;
-			&:hover{
-				color:#056CF2;
-			}
+			color:$linkBlue;
 		}
 	}
 	p:nth-of-type(1){
@@ -136,7 +135,7 @@ body {
 		padding:1.5% 2%;
 		transition: 1s ease;
 		&:hover{
-			color:#056CF2;
+			color:$linkBlue;
 		}
 	}
 }
@@ -183,6 +182,9 @@ body {
 	max-width: 60%;
 	flex-direction:column;
 	justify-content:space-around;
+	p a{
+		color:$linkBlue;
+	}
 }
 
 .visitPage{ 
