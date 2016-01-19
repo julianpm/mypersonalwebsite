@@ -186,6 +186,7 @@ p{
 }
 
 .portfolioInfo{
+	border:1px solid black;
 	max-width: 60%;
 	flex-direction:column;
 	justify-content:space-around;
@@ -237,18 +238,14 @@ p{
 }
 
 @media all and (max-width: 1075px){
-	.nameAndTitle{
-		h1{
-			font-size:60px;
-		}
+	.nameAndTitle h1{
+		font-size:60px;
 	}
 }
 
 @media all and (max-width: 1025px){
-	.nameAndTitle{
-		h1{
-			font-size:56px;
-		}
+	.nameAndTitle h1{
+		font-size:56px;
 	}
 }
 
@@ -280,16 +277,14 @@ p{
 }
 
 @media all and (max-width: 890px){
-	.nameAndTitle{
-		h1{
-			font-size:46px;
-		}
-		h2{
-			font-size:30px;
-		}
+	.nameAndTitle h1{
+		font-size:46px;
 	}
-	.portfolioHeader{
+	.nameAndTitle h2, .portfolioHeader{
 		font-size:30px;
+	}
+	.portfolioTitle{
+		font-size:20px;
 	}
 }
 
@@ -299,6 +294,7 @@ p{
 	}
 	.headShot{
 		margin:5% auto 0 auto;
+		width: auto;
 	}
 	.portfolio{
 		margin-bottom:10%;
@@ -311,14 +307,11 @@ p{
 		max-width: 100%;
 		margin:0 auto 5% auto;
 	}
-	.portfolioTitle{
+	.portfolioTitle, .portfolioInfo p{
 		margin-bottom:3%;
 	}
 	.portfolioInfo{
 		max-width: 100%;
-		p{
-			margin-bottom:3%;
-		}
 	}
 }
 
@@ -338,44 +331,34 @@ p{
 	}
 }
 
-@media all and (max-width: 510px){
-	.nameAndTitle{
-		h1{
-			font-size:34px;
-		}
-		h2{
-			font-size:18px;
-		}
-		p{
-			font-size:12px;
-		}
+@media all and (max-width: 570px){
+	.nameAndTitle h1{
+		font-size:40px;
+	}
+	.nameAndTitle h2, .portfolioHeader{
+		font-size:26px;
+	}
+	.portfolioTitle, .portfolioInfo p{
+		margin-bottom:6%;
+	}
+}
+
+@media all and (max-width: 515px){
+	.nameAndTitle h1{
+		font-size:36px;
 	}
 	.socialIcons{
 		margin-top:6%;
 	}
 	.border{
-		margin:10% auto;
+		margin:8% auto;
 	}
-	.portfolio{
-		margin-bottom:15%;
-	}
-	.portfolioHeader{
-		font-size:18px;
-		margin-bottom:10%;
-	}
-	.portfolioImage{
+	.portfolioHeader, .portfolioImage{
 		margin-bottom:8%;
 	}
-	.portfolioTitle{
-		font-size:14px;
-		margin-bottom:5%;
-	}
-	.portfolioInfo p, .visitPage{
-		font-size:12px;
-	}
-	.portfolioInfo p{
-		margin-bottom:5%;
-	}
+}
+
+@media all and (max-width: 510px){
 	.mainFooter p{
 		padding:4% 0;
 	}
