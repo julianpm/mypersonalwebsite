@@ -20,15 +20,20 @@ $mainGrey:#4a4a4a;
 $bgGrey:#e6e6e6;
 $hoverBlack:#161616;
 $linkBlue:#056CF2;
-@mixin headerFont($sizeValue){
-	font-size: $sizeValue;
+
+@mixin headerFont{
 	font-family:'Muli',sans-serif;
 	font-weight:300;
 }
-@mixin contentFont($sizeValue){
-	font-size:$sizeValue;
+
+@mixin contentFont{
 	font-family:'Hind',sans-serif;
 	font-weight:300;
+}
+
+@mixin fontSize($number){
+	font-size:$number * 1px;
+	font-size:($number / 10) * 1rem;
 }
 
 /*
@@ -38,11 +43,13 @@ Default Styling
 */
 
 html{
-	font-size:62.5%
+	font-size:62.5%;
 }
 
-body{
-	font-size:1.6rem;
+body {
+	color: $mainGrey;
+	@include fontSize(16);
+	@include contentFont;
 }
 
 .flex{
@@ -50,18 +57,18 @@ body{
 	flex-wrap:wrap;
 }
 
-h1,h2,h3,h4,h5,h6,p,ul,li{
+h1, h2, h3, h4, h5, h6, p, ul, li{
 	padding:0;
 	margin:0;
+}
+
+h1, h2, h3, h4{
+	@include headerFont;
 }
 
 img {
 	max-width: 100%;
 	height:auto;
-}
-
-body {
-	color: $mainGrey;
 }
 
 .container {
@@ -84,10 +91,6 @@ body {
 	list-style:none;
 }
 
-p{
-	@include contentFont(16px);
-}
-
 
 
 
@@ -108,13 +111,13 @@ p{
 	color:$mainGrey;
 	h1{
 		border: 1px solid black;
-		@include headerFont(64px);
+		@include fontSize(64);
 		letter-spacing:8px;
 		margin-top:3%;
 	}
 	h2{
 		border:1px solid black;
-		@include headerFont(36px);
+		@include fontSize(36);
 		letter-spacing:4px;
 	}
 	p{
@@ -143,7 +146,7 @@ p{
 	width: 40%;
 	a{
 		text-align:center;
-		@include contentFont(24px);
+		@include fontSize(24);
 		color:$mainGrey;
 		padding:2%;
 		transition: 1s ease;
@@ -172,7 +175,7 @@ p{
 
 .portfolioHeader{
 	border:1px solid black;
-	@include headerFont(36px);
+	@include fontSize(36);
 	letter-spacing:4px;
 	margin-bottom:3%;
 }
@@ -189,7 +192,7 @@ p{
 }
 
 .portfolioTitle{
-	@include headerFont(24px);
+	@include fontSize(24);
 }
 
 .portfolioInfo{
@@ -202,8 +205,7 @@ p{
 	}
 }
 
-.visitPage{ 
-	@include contentFont(16px);
+.visitPage{
 	color:white;
 	border-radius:5px;
 	padding:10px 10px 8px 10px;
@@ -228,7 +230,8 @@ p{
 	text-align:center;
 	p{
 		padding:1.5% 0;
-		@include contentFont(12px);
+		@include contentFont;
+		@include fontSize(12);
 	}
 }
 
@@ -246,13 +249,13 @@ p{
 
 @media all and (max-width: 1075px){
 	.nameAndTitle h1{
-		font-size:60px;
+		@include fontSize(60);
 	}
 }
 
 @media all and (max-width: 1025px){
 	.nameAndTitle h1{
-		font-size:56px;
+		@include fontSize(56);
 	}
 }
 
