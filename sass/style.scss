@@ -94,17 +94,20 @@ p{
 }
 
 .nameAndTitle{
+	border:1px solid black;
 	width: 72%;
 	flex-direction:column;
 	justify-content:center;
 	line-height:72px;
 	color:$mainGrey;
 	h1{
+		border: 1px solid black;
 		@include headerFont(64px);
 		letter-spacing:8px;
 		margin-top:3%;
 	}
 	h2{
+		border:1px solid black;
 		@include headerFont(36px);
 		letter-spacing:4px;
 	}
@@ -123,10 +126,12 @@ p{
 }
 
 .headShot{
+	border:1px solid black;
 	align-self:flex-start;
 }
 
 .socialIcons{
+	border:1px solid black;
 	justify-content:space-between;
 	margin:3% auto;
 	width: 40%;
@@ -159,12 +164,14 @@ p{
 // Portfolio
 
 .portfolioHeader{
+	border:1px solid black;
 	@include headerFont(36px);
 	letter-spacing:4px;
 	margin-bottom:3%;
 }
 
 .portfolio{
+	border:1px solid black;
 	margin:0 auto 6% auto;
 	justify-content:space-between;
 }
@@ -225,33 +232,32 @@ p{
 
 @media all and (max-width: 1150px){
 	.nameAndTitle{
-		width: 65%;
+		width: 68%;
 	}
 }
 
-@media all and (max-width: 1125px){
-	.portfolioHeader{
-		font-size:30px;
-	}
-	.portfolioInfo p, .visitPage{
-		font-size:14px;
-	}
-}
-
-@media all and (max-width:1000px){
+@media all and (max-width: 1075px){
 	.nameAndTitle{
 		h1{
-			font-size:44px;
-		}
-		h2{
-			font-size:24px;
+			font-size:60px;
 		}
 	}
-	.portfolioHeader{
-		font-size:24px;
+}
+
+@media all and (max-width: 1025px){
+	.nameAndTitle{
+		h1{
+			font-size:56px;
+		}
 	}
-	.portfolioTitle{
-		font-size:20px;
+}
+
+@media all and (max-width: 990px){
+	.nameAndTitle{
+		width: 65%;
+		h1{
+			font-size:50px;
+		}
 	}
 }
 
@@ -264,21 +270,26 @@ p{
 	}
 }
 
-@media all and (max-width: 900px){
+@media all and (max-width: 930px){
 	.nameAndTitle{
-		width: 62%;
+		width: 68%;
+	}
+	.headShot{
+		width: 30%;
+	}
+}
+
+@media all and (max-width: 890px){
+	.nameAndTitle{
 		h1{
-			font-size:40px;
+			font-size:46px;
 		}
 		h2{
-			font-size:22px;
+			font-size:30px;
 		}
 	}
 	.portfolioHeader{
-		font-size:22px;
-	}
-	.portfolioTitle{
-		font-size:18px;
+		font-size:30px;
 	}
 }
 
