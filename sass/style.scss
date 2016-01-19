@@ -78,6 +78,10 @@ body {
 	list-style:none;
 }
 
+p{
+	@include contentFont(16px);
+}
+
 
 
 
@@ -105,7 +109,6 @@ body {
 		letter-spacing:4px;
 	}
 	p{
-		@include contentFont(16px);
 		line-height:30px;
 		a{
 			color:$linkBlue;
@@ -130,7 +133,7 @@ body {
 	a{
 		text-align:center;
 		@include contentFont(24px);
-		padding:1.5% 2%;
+		padding:2%;
 		transition: 1s ease;
 		&:hover{
 			color:$linkBlue;
@@ -176,7 +179,6 @@ body {
 }
 
 .portfolioInfo{
-	@include contentFont(16px);
 	max-width: 60%;
 	flex-direction:column;
 	justify-content:space-around;
@@ -228,17 +230,6 @@ body {
 }
 
 @media all and (max-width: 1125px){
-	.nameAndTitle{
-		h1{
-			font-size: 54px;
-		}
-		h2{
-			font-size: 30px;
-		}
-		p{
-			font-size:14px;
-		}
-	}
 	.portfolioHeader{
 		font-size:30px;
 	}
@@ -436,130 +427,3 @@ body {
 		padding:6% 0;
 	}
 }
-
-
-// @media all and (max-width:700px){
-// 	.contactLabel p{
-// 		font-size:14px;
-// 	}
-// 	.socialIcons a{
-// 		width: 8%;
-// 	}
-// }
-
-// @media all and (max-width: 670px){
-// 	.portfolio{
-// 		flex-direction:column;
-// 	}
-// 	.portfolioImages{
-// 		width: 100%;
-// 	}
-// 	.portfolioInfo{
-// 		width: 100%;
-// 		margin-top:5%;
-// 	}
-// 	.bio{
-// 		width: 50%;
-// 	}
-// 	.headShot{
-// 		width: 45%;
-// 	}
-// 	.nameAndTitle{
-// 	width: 100%;
-// 	h1{
-// 		font-size:28px;
-// 		}
-// 	h2{
-// 		font-size:16px;
-// 		}
-// 	}
-// 	.vertDiv{
-// 		width: 100%;
-// 		height: 1%;
-// 	}
-// 	.mainPage{
-// 		height:40vh;
-// 		min-height:250px;
-// 	}
-// 	.verticalDivider{
-// 		width: 70%;
-// 		height: 1%;
-// 		margin:0 auto;
-// 		border-bottom:1px solid $mainGrey;
-
-// 	}
-// 	.theHeader,
-// 	header{
-// 		width: 100%;
-// 	}
-// 	.mainMenu{
-// 		flex-direction:row;
-// 		margin-top:0;
-// 		padding:4% 0;
-// 		width: 100%;
-// 		height:100%;
-// 		a{
-// 			font-size:16px;
-// 		}
-// 	}
-// 	.socialIcons a{
-// 		width: 12%;
-// 	}
-// 	.contactLabel p{
-// 		font-size:12px;
-// 	}
-// 	.portfolio h5{
-// 		font-size:18px;
-// 	}
-// 	.portfolioHeader h3{
-// 		font-size:18px;
-// 	}
-// 	.portfolioTools{
-// 		width: 40%;
-// 	}
-// 	.portfolioDescription{
-// 		width: 45%;
-// 		font-size:14px;
-// 	}
-// 	.about{
-// 		flex-direction:column;
-// 		h3{
-// 			font-size:18px;
-// 		}
-// 	}
-// 	.bio{
-// 		width: 100%;
-// 		font-size:14px;
-// 	}
-// 	.headShot{
-// 		width: 50%;
-// 	}
-// 	.quote{
-// 		font-size:14px;
-// 	}
-// }
-
-// @media all and (max-width: 380px){
-// 	.mainPage{
-// 		height:50vh;
-// 	}
-// }
-
-// @media all and (max-width: 322px){
-// 	.nameAndTitle h1{
-// 		font-size:22px;
-// 	}
-// 	.nameAndTitle h2{
-// 		font-size:12px;
-// 	}
-// 	.mainPage{
-// 		height:45vh;
-// 		min-height:150px;
-// 	}
-// }
-
-
-
-
-
-
