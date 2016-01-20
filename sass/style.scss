@@ -458,8 +458,14 @@ img {
 	.nameAndTitle h1{
 		letter-spacing:0;
 	}
+	.border{
+		width: 55%;
+	}
 	.portfolioHeader{
 		margin:8% auto;
+	}
+	.portfolioTitle{
+		@include fontSize(19);
 	}
 	.mainFooter p{
 		padding:6% 0;
@@ -473,38 +479,26 @@ img {
 	.nameAndTitle h2, .portfolioHeader{
 		@include fontSize(24);
 	}
+	.portfolio{
+		margin-bottom:14%;
+	}
+	.portfolioImage, .portfolioTitle, .portfolioInfo p{
+		margin-bottom:10%;
+	}
 }
 
-// @media all and (max-width: 380px){
-// 	.nameAndTitle{
-// 		h1{
-// 			font-size:22px;
-// 		}
-// 		h2{
-// 			font-size:16px;
-// 		}
-// 	}
-// 	.portfolioHeader{
-// 		font-size:16px;
-// 	}
-// }
-
-// @media all and (max-width: 350px){
-// 	.nameAndTitle{
-// 		h1{
-// 			font-size:18px;
-// 		}
+@media all and (max-width: 350px){
+	.nameAndTitle h1{
+		@include fontSize(36);
+	}
 // 		h2{
 // 			font-size:14px;
 // 		}
 // 	}
-// 	.socialIcons{
-// 		margin-top:5%;
-// 	}
-// 	.portfolioHeader{
-// 		font-size:14px;
-// 	}
-// 	.mainFooter p{
-// 		padding:6% 0;
-// 	}
-// }
+	.socialIcons{
+		margin:8% auto;
+	}
+	.portfolioHeader{
+		margin:10% auto;
+	}
+}
