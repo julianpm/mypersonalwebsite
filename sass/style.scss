@@ -425,6 +425,7 @@ img {
 	}
 	.nameAndTitle h2{
 		letter-spacing:0;
+		margin-bottom:5%;
 	}
 	.portfolio{
 		margin-bottom:12%;
@@ -439,6 +440,9 @@ img {
 		@include fontSize(42);
 		letter-spacing:1px;
 	}
+	.nameAndTitle h2, .portfolioHeader{
+		@include fontSize(28);
+	}
 }
 
 @media all and (max-width: 415px){
@@ -446,12 +450,14 @@ img {
 		@include fontSize(40);
 	}
 	.nameAndTitle h2, .portfolioHeader{
-		@include fontSize(28);
+		@include fontSize(26);
 	}
 }
 
 @media all and (max-width: 390px){
-
+	.mainFooter p{
+		padding:6% 0;
+	}
 }
 
 
@@ -468,9 +474,6 @@ img {
 	}
 	.portfolioHeader{
 		font-size:16px;
-	}
-	.mainFooter p{
-		padding:5% 0;
 	}
 }
 
