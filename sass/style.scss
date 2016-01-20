@@ -360,6 +360,12 @@ img {
 		@include fontSize(58);
 		letter-spacing:5px;
 	}
+	.portfolio{
+		margin-bottom:14%;
+	}
+	.portfolioTitle, .portfolioInfo p{
+		margin-bottom:6%;
+	}
 }
 
 @media all and (max-width: 630px){
@@ -392,7 +398,7 @@ img {
 		width: 80%;
 	}
 	.portfolioTitle, .portfolioInfo p{
-		margin-bottom:6%;
+		margin-bottom:8%;
 	}
 }
 
@@ -420,10 +426,10 @@ img {
 		margin-bottom:5%;
 	}
 	.portfolio{
-		margin-bottom:12%;
+		margin-bottom:16%;
 	}
 	.portfolioImage, .portfolioTitle, .portfolioInfo p{
-		margin-bottom:8%;
+		margin-bottom:10%;
 	}
 }
 
@@ -472,14 +478,10 @@ img {
 		@include fontSize(24);
 	}
 	.portfolio{
-		margin-bottom:14%;
-	}
-	.portfolioImage, .portfolioInfo p{
-		margin-bottom:10%;
+		margin-bottom:18%;
 	}
 	.portfolioTitle{
 		@include fontSize(18);
-		margin-bottom:10%;
 	}
 }
 
