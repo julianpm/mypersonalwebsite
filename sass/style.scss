@@ -455,44 +455,56 @@ img {
 }
 
 @media all and (max-width: 390px){
+	.nameAndTitle h1{
+		letter-spacing:0;
+	}
+	.portfolioHeader{
+		margin:8% auto;
+	}
 	.mainFooter p{
 		padding:6% 0;
 	}
 }
 
-
-
-
-@media all and (max-width: 380px){
-	.nameAndTitle{
-		h1{
-			font-size:22px;
-		}
-		h2{
-			font-size:16px;
-		}
+@media all and (max-width: 370px){
+	.nameAndTitle h1{
+		@include fontSize(38);
 	}
-	.portfolioHeader{
-		font-size:16px;
+	.nameAndTitle h2, .portfolioHeader{
+		@include fontSize(24);
 	}
 }
 
-@media all and (max-width: 350px){
-	.nameAndTitle{
-		h1{
-			font-size:18px;
-		}
-		h2{
-			font-size:14px;
-		}
-	}
-	.socialIcons{
-		margin-top:5%;
-	}
-	.portfolioHeader{
-		font-size:14px;
-	}
-	.mainFooter p{
-		padding:6% 0;
-	}
-}
+// @media all and (max-width: 380px){
+// 	.nameAndTitle{
+// 		h1{
+// 			font-size:22px;
+// 		}
+// 		h2{
+// 			font-size:16px;
+// 		}
+// 	}
+// 	.portfolioHeader{
+// 		font-size:16px;
+// 	}
+// }
+
+// @media all and (max-width: 350px){
+// 	.nameAndTitle{
+// 		h1{
+// 			font-size:18px;
+// 		}
+// 		h2{
+// 			font-size:14px;
+// 		}
+// 	}
+// 	.socialIcons{
+// 		margin-top:5%;
+// 	}
+// 	.portfolioHeader{
+// 		font-size:14px;
+// 	}
+// 	.mainFooter p{
+// 		padding:6% 0;
+// 	}
+// }
