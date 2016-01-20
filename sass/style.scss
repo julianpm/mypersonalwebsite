@@ -103,20 +103,17 @@ img {
 }
 
 .nameAndTitle{
-	border:1px solid black;
 	width: 72%;
 	flex-direction:column;
 	justify-content:center;
 	line-height:72px;
 	color:$mainGrey;
 	h1{
-		border: 1px solid black;
 		@include fontSize(64);
 		letter-spacing:8px;
 		margin-top:3%;
 	}
 	h2{
-		border:1px solid black;
 		@include fontSize(36);
 		letter-spacing:4px;
 	}
@@ -135,12 +132,10 @@ img {
 }
 
 .headShot{
-	border:1px solid black;
 	align-self:flex-start;
 }
 
 .socialIcons{
-	border:1px solid black;
 	justify-content:space-between;
 	margin:3% auto;
 	width: 40%;
@@ -174,14 +169,12 @@ img {
 // Portfolio
 
 .portfolioHeader{
-	border:1px solid black;
 	@include fontSize(36);
 	letter-spacing:4px;
 	margin-bottom:3%;
 }
 
 .portfolio{
-	border:1px solid black;
 	margin:0 auto 6% auto;
 	justify-content:space-between;
 }
@@ -196,7 +189,6 @@ img {
 }
 
 .portfolioInfo{
-	border:1px solid black;
 	max-width: 60%;
 	flex-direction:column;
 	justify-content:space-around;
@@ -482,7 +474,11 @@ img {
 	.portfolio{
 		margin-bottom:14%;
 	}
-	.portfolioImage, .portfolioTitle, .portfolioInfo p{
+	.portfolioImage, .portfolioInfo p{
+		margin-bottom:10%;
+	}
+	.portfolioTitle{
+		@include fontSize(18);
 		margin-bottom:10%;
 	}
 }
@@ -491,14 +487,22 @@ img {
 	.nameAndTitle h1{
 		@include fontSize(36);
 	}
-// 		h2{
-// 			font-size:14px;
-// 		}
-// 	}
+	.nameAndTitle h2, .portfolioHeader{
+		@include fontSize(22);
+	}
 	.socialIcons{
 		margin:8% auto;
 	}
 	.portfolioHeader{
 		margin:10% auto;
+	}
+}
+
+@media all and (max-width: 335px){
+	.nameAndTitle h1{
+		@include fontSize(34);
+	}
+	.nameAndTitle h2, .portfolioHeader{
+		@include fontSize(21)
 	}
 }
